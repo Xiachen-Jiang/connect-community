@@ -1,23 +1,48 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+// src/pages/Tab1.tsx
+import React from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonText } from '@ionic/react';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
+  const handleButtonClick = () => {
+    alert('Button Clicked!');
+  };
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Connect Community</IonTitle>
+          <IonTitle>Button Page</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large" color="secondary">Connect Community</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        Hello world!!!!!
-        <ExploreContainer name="Tab 1 page" />
+        <div className="ion-padding">
+          <IonText>
+            <h2>Welcome to the Connect Community!</h2>
+            <p>Click the button below to start exploring our community.</p>
+          </IonText>
+          <div className="button-container">
+            <IonButton expand="full" onClick={handleButtonClick}>
+              Travel attractions
+            </IonButton>
+            <IonButton expand="full" onClick={handleButtonClick}>
+              Events
+            </IonButton>
+            <IonButton expand="full" onClick={handleButtonClick}>
+              Local Services
+            </IonButton>
+            <IonButton expand="full" onClick={handleButtonClick}>
+              FAQ self help
+            </IonButton>
+            <IonButton expand="full" onClick={handleButtonClick}>
+              Support for language barrier
+            </IonButton>
+            <IonButton expand="full" onClick={handleButtonClick}>
+              Feedback
+            </IonButton>
+
+          </div>
+        </div>
       </IonContent>
     </IonPage>
   );
