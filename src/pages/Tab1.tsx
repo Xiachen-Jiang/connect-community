@@ -35,7 +35,7 @@ const Tab1: React.FC = () => {
               FAQ self help
             </IonButton>
             <IonButton expand="full" onClick={handleButtonClick}>
-              Support for language barrier
+              Chatbot
             </IonButton>
             <IonButton expand="full" onClick={handleButtonClick}>
               Feedback

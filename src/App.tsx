@@ -47,6 +47,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import LotteryTicket from './components/LotteryTicket';
+
+
 
 setupIonicReact();
 
@@ -59,6 +62,7 @@ const App: React.FC = () => (
             <Login />
           </Route>
           <Route component={Register} path="/register" exact />
+          <Route component={LotteryTicket} path='/lotteryticket' exact />
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
@@ -75,15 +79,11 @@ const App: React.FC = () => (
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>Lottery Ticket</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
